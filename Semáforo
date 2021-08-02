@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: teal;}
+h1{
+    color:rgb(174, 174, 248);
+    text-align: center;
+    text-shadow: 0px 3px 3px black;
+}
+div{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border: solid 0.5px;
+    margin: auto;
+    border-radius: 100px;
+    margin: 5px;}
+#semaforoV{background-color: green;box-shadow: 1px 1px ;}
+#semaforoA{background-color: yellow;box-shadow: 1px 1px; margin-top: 30px;}
+#semaforoR{background-color: red;box-shadow: 1px 1px; margin-top: 30px;}
+section{
+    border:solid 0.5px;
+    padding: 15px;
+    width:90px;
+    height:350px;
+    background-color: rgb(49, 47, 47);
+    border-radius: 10px;
+    margin: auto;
+}
+#click1{margin-top: 85px;}
+#click1:hover{background-color: green;}
+#click2{margin-top: 85px;}
+#click2:hover{background-color: yellow;}
+#click3{margin-top: 85px;}
+#click3:hover{background-color: red;}
+#painel{
+    border-radius: 5px;
+    width: 300px;
+    height: 20px;
+    margin: auto;
+    padding: 5px;
+    background-color: rgb(174, 174, 248);
+    margin-top: 15px;
+    color: darkblue;
+}
+    </style>
+</head>
+<body>
+    <header><h1>Escolha em que cor está o semáforo</h1></header>
+    <section>
+        
+        <div id="semaforoV"><input id="click1" type="button" value=" Verde " onclick="Verde()"></div>
+        <div id="semaforoA"><input id="click2" type="button" value="Amarelo" onclick="Amarelo()"></div>
+        <div id="semaforoR"><input id="click3" type="button" value="vermelho" onclick="Vermelho()"></div>
+        
+    </section>
+    <div id="painel">Aguardando semáforo...</div>
+    <script>
+        function Verde(){
+    let green = document.getElementById('click1')
+    let msg = document.getElementById('painel')
+        if (green){
+            msg.innerHTML = 'Livre para passagem'
+        } 
+}
+function Amarelo(){
+    let yellow = document.getElementById('click2')
+    let msg = document.getElementById('painel')
+    if (yellow){
+        msg.innerHTML = 'Sinal prestes a fechar.'
+    }
+}
+function Vermelho(){
+    let red = document.getElementById('click3')
+    let msg = document.getElementById('painel')
+    if (red){
+        msg.innerHTML = 'Sinal fechado.'
+    }
+}
+    </script>
+</body>
+</html>
